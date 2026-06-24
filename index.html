@@ -306,26 +306,40 @@
         font-size: 14px;
       }
 
+      @media (max-width: 1024px) {
+        .features {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
       @media (max-width: 768px) {
-        .nav-header {
-          justify-content: center;
-          margin-bottom: 30px;
-        }
-
-        .logo-container img {
-          height: 40px;
-        }
-
-        .logo-container h2 {
-          font-size: 20px;
+        .hero {
+          padding: 40px 15px;
         }
 
         .hero-top h1 {
           font-size: 36px;
         }
+        
+        .hero-top p {
+          font-size: 16px;
+        }
 
-        .form-card {
-          padding: 25px;
+        .form-brand-banner {
+          padding: 24px 20px 20px;
+        }
+
+        .form-brand-logo-row {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .form-brand-logo-row h3 {
+          font-size: 22px;
+        }
+
+        .form-body {
+          padding: 25px 20px 30px;
         }
 
         .form-grid {
@@ -334,6 +348,7 @@
 
         .features {
           grid-template-columns: 1fr;
+          margin-top: 50px;
         }
       }
     </style>
