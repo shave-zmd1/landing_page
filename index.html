@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cloudship Holidays - Landing page</title>
+    <link rel="icon" href="images/icon.png" type="image/png" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -552,7 +553,7 @@
               window.location.hostname === "localhost" ||
               window.location.hostname === "127.0.0.1"
                 ? "http://localhost:3000/api/public/destinations"
-                : "https://cloud-ship-crm.vercel.app/api/public/destinations";
+                : "https://cloudship-holidays-crm.vercel.app/api/public/destinations";
                 
             const res = await fetch(apiUrl);
             if (res.ok) {
@@ -634,7 +635,7 @@
               window.location.hostname === "localhost" ||
               window.location.hostname === "127.0.0.1"
                 ? "http://localhost:3000/api/public/leads"
-                : "https://cloud-ship-crm.vercel.app/api/public/leads"; // Fallback for production URL if deployed
+                : "https://cloudship-holidays-crm.vercel.app/api/public/leads"; // Fallback for production URL if deployed
 
             const res = await fetch(apiUrl, {
               method: "POST",
