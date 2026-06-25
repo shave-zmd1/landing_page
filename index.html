@@ -8,7 +8,7 @@
 
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet" 
+      rel="stylesheet"
     />
 
     <style>
@@ -131,7 +131,12 @@
       }
 
       .form-brand-banner {
-        background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f4c81 100%);
+        background: linear-gradient(
+          135deg,
+          #0f172a 0%,
+          #1e3a5f 50%,
+          #0f4c81 100%
+        );
         padding: 32px 40px 28px;
         text-align: center;
         position: relative;
@@ -139,24 +144,24 @@
       }
 
       .form-brand-banner::before {
-        content: '';
+        content: "";
         position: absolute;
         top: -40px;
         right: -40px;
         width: 180px;
         height: 180px;
-        background: rgba(255,255,255,0.04);
+        background: rgba(255, 255, 255, 0.04);
         border-radius: 50%;
       }
 
       .form-brand-banner::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -50px;
         left: -30px;
         width: 200px;
         height: 200px;
-        background: rgba(255,255,255,0.03);
+        background: rgba(255, 255, 255, 0.03);
         border-radius: 50%;
       }
 
@@ -176,7 +181,7 @@
         border-radius: 10px;
         background: white;
         padding: 5px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
       }
 
       .form-brand-logo-row h3 {
@@ -188,7 +193,7 @@
       }
 
       .form-brand-tagline {
-        color: rgba(255,255,255,0.75);
+        color: rgba(255, 255, 255, 0.75);
         font-size: 13px;
         margin-bottom: 0;
         position: relative;
@@ -320,7 +325,7 @@
         .hero-top h1 {
           font-size: 36px;
         }
-        
+
         .hero-top p {
           font-size: 16px;
         }
@@ -352,6 +357,41 @@
         }
       }
     </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = "https://connect.facebook.net/en_US/fbevents.js";
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script");
+
+      fbq("init", "1844312859483430");
+      fbq("track", "PageView");
+    </script>
+
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1844312859483430&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <!-- End Meta Pixel Code -->
   </head>
 
   <body>
@@ -384,154 +424,161 @@
             <p class="form-brand-tagline">✈️ Your Dream Vacation Awaits</p>
           </div>
           <div class="form-body">
-          <div class="form-header">
-            <h2>Request Custom Itinerary</h2>
-            <p>Fill in your travel details and receive a personalized quote.</p>
-          </div>
-
-          <form id="leadForm">
-            <div class="form-grid">
-              <div class="form-group full">
-                <label>Destination <span style="color: red;">*</span></label>
-                <select id="destination" name="destination" required>
-                  <option value="">Select Destination</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label>Full Name <span style="color: red;">*</span></label>
-                <input
-                  type="text"
-                  id="fullName"
-                  name="fullName"
-                  placeholder="Enter your name"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <label>Phone Number <span style="color: red;">*</span></label>
-                <input
-                  type="tel"
-                  id="phoneNumber"
-                  name="phoneNumber"
-                  placeholder="9876543210"
-                  pattern="[0-9]{10}"
-                  title="Please enter exactly 10 digits"
-                  oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                  maxlength="10"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <label>Email Address <span style="color: red;">*</span></label>
-                <input
-                  type="email"
-                  id="emailId"
-                  name="emailId"
-                  required
-                  placeholder="your@email.com"
-                  pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
-                  title="Please enter a valid email address"
-                />
-              </div>
-
-              <div class="form-group">
-                <label>Travel Date <span style="color: red;">*</span></label>
-                <input type="date" id="travelDate" name="travelDate" required />
-              </div>
-
-              <div class="form-group">
-                <label>Duration</label>
-                <select id="duration" name="duration">
-                  <option>Select Duration</option>
-                  <option>2 Nights 3 Days</option>
-                  <option>3 Nights 4 Days</option>
-                  <option>4 Nights 5 Days</option>
-                  <option>5 Nights 6 Days</option>
-                  <option>6 Nights 7 Days</option>
-                  <option>7 Nights 8 Days</option>
-                  <option>8 Nights 9 Days</option>
-                  <option>9 Nights 10 Days</option>
-                  <option>10 Nights 11 Days</option>
-                  <option>Above 10 Nights</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label>Adults <span style="color: red;">*</span></label>
-                <select id="adults" name="adults" required>
-                  <option>2 Adults</option>
-                  <option>3 Adults</option>
-                  <option>4 Adults</option>
-                  <option>5 Adults</option>
-                  <option>6 Adults</option>
-                  <option>7 Adults</option>
-                  <option>8 Adults</option>
-                  <option>9 Adults</option>
-                  <option>Above 9 Adults</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label>Children <span style="color: red;">*</span></label>
-                <select id="children" name="children" required>
-                  <option>0 Children</option>
-                  <option>1 Child</option>
-                  <option>2 Children</option>
-                  <option>3 Children</option>
-                  <option>4 Children</option>
-                  <option>5 Children</option>
-                  <option>6 Children</option>
-                  <option>Above 6 Children</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label>Flight Required?</label>
-                <select id="flightRequired">
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
-                </select>
-              </div>
-
-              <div class="form-group" id="sourceAirportGroup">
-                <label>Source Airport</label>
-                <input
-                  type="text"
-                  id="sourceAirport"
-                  name="sourceAirport"
-                  placeholder="e.g. New Delhi (DEL)"
-                />
-              </div>
-
-              <div class="form-group">
-                <label>Time to Book</label>
-                <select id="timeToBook" name="timeToBook">
-                  <option>Select Time to Book</option>
-                  <option>Immediately</option>
-                  <option>With in a week</option>
-                  <option>With in a month</option>
-                  <option>Nothing decided as of now</option>
-                </select>
-              </div>
-
-              <div class="form-group full">
-                <label>Additional Requirements</label>
-                <textarea
-                  id="requirements"
-                  name="requirements"
-                  rows="5"
-                  placeholder="Tell us about your requirements, preferred hotels, sightseeing, honeymoon plans, family trip, etc."
-                ></textarea>
-              </div>
+            <div class="form-header">
+              <h2>Request Custom Itinerary</h2>
+              <p>
+                Fill in your travel details and receive a personalized quote.
+              </p>
             </div>
 
-            <button type="submit" class="submit-btn">
-              🚀 Get My Free Itinerary
-            </button>
-          </form>
+            <form id="leadForm">
+              <div class="form-grid">
+                <div class="form-group full">
+                  <label>Destination <span style="color: red">*</span></label>
+                  <select id="destination" name="destination" required>
+                    <option value="">Select Destination</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Full Name <span style="color: red">*</span></label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label>Phone Number <span style="color: red">*</span></label>
+                  <input
+                    type="tel"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    placeholder="9876543210"
+                    pattern="[0-9]{10}"
+                    title="Please enter exactly 10 digits"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                    maxlength="10"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label>Email Address <span style="color: red">*</span></label>
+                  <input
+                    type="email"
+                    id="emailId"
+                    name="emailId"
+                    required
+                    placeholder="your@email.com"
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+                    title="Please enter a valid email address"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label>Travel Date <span style="color: red">*</span></label>
+                  <input
+                    type="date"
+                    id="travelDate"
+                    name="travelDate"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label>Duration</label>
+                  <select id="duration" name="duration">
+                    <option>Select Duration</option>
+                    <option>2 Nights 3 Days</option>
+                    <option>3 Nights 4 Days</option>
+                    <option>4 Nights 5 Days</option>
+                    <option>5 Nights 6 Days</option>
+                    <option>6 Nights 7 Days</option>
+                    <option>7 Nights 8 Days</option>
+                    <option>8 Nights 9 Days</option>
+                    <option>9 Nights 10 Days</option>
+                    <option>10 Nights 11 Days</option>
+                    <option>Above 10 Nights</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Adults <span style="color: red">*</span></label>
+                  <select id="adults" name="adults" required>
+                    <option>2 Adults</option>
+                    <option>3 Adults</option>
+                    <option>4 Adults</option>
+                    <option>5 Adults</option>
+                    <option>6 Adults</option>
+                    <option>7 Adults</option>
+                    <option>8 Adults</option>
+                    <option>9 Adults</option>
+                    <option>Above 9 Adults</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Children <span style="color: red">*</span></label>
+                  <select id="children" name="children" required>
+                    <option>0 Children</option>
+                    <option>1 Child</option>
+                    <option>2 Children</option>
+                    <option>3 Children</option>
+                    <option>4 Children</option>
+                    <option>5 Children</option>
+                    <option>6 Children</option>
+                    <option>Above 6 Children</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Flight Required?</label>
+                  <select id="flightRequired">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+
+                <div class="form-group" id="sourceAirportGroup">
+                  <label>Source Airport</label>
+                  <input
+                    type="text"
+                    id="sourceAirport"
+                    name="sourceAirport"
+                    placeholder="e.g. New Delhi (DEL)"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label>Time to Book</label>
+                  <select id="timeToBook" name="timeToBook">
+                    <option>Select Time to Book</option>
+                    <option>Immediately</option>
+                    <option>With in a week</option>
+                    <option>With in a month</option>
+                    <option>Nothing decided as of now</option>
+                  </select>
+                </div>
+
+                <div class="form-group full">
+                  <label>Additional Requirements</label>
+                  <textarea
+                    id="requirements"
+                    name="requirements"
+                    rows="5"
+                    placeholder="Tell us about your requirements, preferred hotels, sightseeing, honeymoon plans, family trip, etc."
+                  ></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                🚀 Get My Free Itinerary
+              </button>
+            </form>
           </div>
         </div>
 
@@ -569,16 +616,17 @@
               window.location.hostname === "127.0.0.1"
                 ? "http://localhost:3000/api/public/destinations"
                 : "https://cloudship-holidays-crm.vercel.app/api/public/destinations";
-                
+
             const res = await fetch(apiUrl);
             if (res.ok) {
               const { data } = await res.json();
               const destSelect = document.getElementById("destination");
-              
+
               // Keep only the first placeholder option
-              destSelect.innerHTML = '<option value="">Select Destination</option>';
-              
-              data.forEach(dest => {
+              destSelect.innerHTML =
+                '<option value="">Select Destination</option>';
+
+              data.forEach((dest) => {
                 const option = document.createElement("option");
                 option.value = dest.name;
                 option.textContent = dest.name;
@@ -589,7 +637,7 @@
             console.error("Failed to fetch destinations:", err);
           }
         }
-        
+
         fetchDestinations();
 
         const flightRequiredSelect = document.getElementById("flightRequired");
@@ -659,6 +707,11 @@
             });
 
             if (res.ok) {
+              // Track Meta Lead Event
+              if (typeof fbq === "function") {
+                fbq("track", "Lead");
+              }
+
               alert("Your itinerary request has been submitted successfully!");
               leadForm.reset();
             } else {
