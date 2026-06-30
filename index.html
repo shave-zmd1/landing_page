@@ -490,9 +490,9 @@
                 </div>
 
                 <div class="form-group">
-                  <label>Duration</label>
-                  <select id="duration" name="duration">
-                    <option>Select Duration</option>
+                  <label>Duration <span style="color: red">*</span></label>
+                  <select id="duration" name="duration" required>
+                    <option value="">Select Duration</option>
                     <option>2 Nights 3 Days</option>
                     <option>3 Nights 4 Days</option>
                     <option>4 Nights 5 Days</option>
@@ -554,9 +554,9 @@
                 </div>
 
                 <div class="form-group">
-                  <label>Time to Book</label>
-                  <select id="timeToBook" name="timeToBook">
-                    <option>Select Time to Book</option>
+                  <label>Time to Book <span style="color: red">*</span></label>
+                  <select id="timeToBook" name="timeToBook" required>
+                    <option value="">Select Time to Book</option>
                     <option>Immediately</option>
                     <option>With in a week</option>
                     <option>With in a month</option>
@@ -608,6 +608,13 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        // Set minimum date for Travel Date to today
+        const travelDateInput = document.getElementById("travelDate");
+        if (travelDateInput) {
+          const today = new Date().toISOString().split("T")[0];
+          travelDateInput.setAttribute("min", today);
+        }
+
         // Fetch Destinations API
         async function fetchDestinations() {
           try {
