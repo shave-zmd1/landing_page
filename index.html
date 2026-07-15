@@ -622,7 +622,7 @@
               window.location.hostname === "localhost" ||
               window.location.hostname === "127.0.0.1"
                 ? "http://localhost:3000/api/public/destinations"
-                : "https://cloudship-holidays-crm.vercel.app/api/public/destinations";
+                : "https://crm.cloudshipholidays.com/api/public/destinations";
 
             const res = await fetch(apiUrl);
             if (res.ok) {
@@ -705,7 +705,7 @@
               window.location.hostname === "localhost" ||
               window.location.hostname === "127.0.0.1"
                 ? "http://localhost:3000/api/public/leads"
-                : "https://cloudship-holidays-crm.vercel.app/api/public/leads"; // Fallback for production URL if deployed
+                : "https://crm.cloudshipholidays.com/api/public/leads"; // Fallback for production URL if deployed
 
             const res = await fetch(apiUrl, {
               method: "POST",
